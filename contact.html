@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>COMP208 AS3 Braydon Pilot</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.title-line {
+				text-align: center; 
+				margin-bottom: 20px; 
+			}
+	
+			.title-line h1 {
+				font-size: 28px; 
+				color: #333; 
+			}
+	
+		</style>
+		
+	</head>
+	<body class="is-preload no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Title Line -->
+						<div class="title-line">
+							<h1><img src="images/logo1.png" alt="Logo" class="logo">DUNMORE HARD GOODS</h1>
+							<div style="clear:both;"></div> 
+						
+						
+
+						<!-- Nav -->
+						<nav id="nav" class="centered-nav">
+							<ul>
+									<li><a href="index.html">HOME</a></li>
+									
+									<li><a href="about.html">ABOUT</a></li>
+									<li><a href="boardfit.html">BOARDFIT</a></li>
+									<li>
+										<a href="#">SHOP</a>
+										<ul>
+											<li><a href="newrelease.html">NEW RELEASES</a></li>
+											<li><a href="sale.html">SALE</a></li>
+											
+										</ul>
+									</li>
+									<li class="current"><a href="contact.html">CONTACT</a></li>
+								</ul>
+							</nav>
+
+					</header>
+				
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div id="content">
+
+							<!-- Contact Form -->
+<id="main-wrapper">
+    <div class="container">
+        <header>
+            <h2>Contact Us</h2>
+        </header>
+        <form method="post" action="#">
+            <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                    <input type="text" name="name" id="name" placeholder="Your Name" />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                    <input type="email" name="email" id="email" placeholder="Your Email Address" />
+                </div>
+                <div class="col-12">
+                    <input type="text" name="subject" id="subject" placeholder="Subject" />
+                </div>
+                <div class="col-12">
+                    <textarea name="message" id="message" placeholder="Your Message" rows="6" style="resize: none;"></textarea>
+                </div>
+                <div class="col-12">
+                    <ul class="actions">
+                        <li><a href="#" onclick="sendEmail()" class="button primary">Send Message</a></li>
+                        <li><input type="reset" value="Clear" class="button" /></li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function sendEmail() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+        window.location.href = `mailto:contact@dunmorehardgoods.com.au?subject=${subject}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A${message}`;
+    }
+</script>
+
+						
+						<div class="row">
+							<div class="col-12">
+								<div id="copyright">
+									<ul class="menu">
+										<li>&copy; Braydon Pilot. All rights reserved</li><li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>COMP208 AS3 Braydon Pilot</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.title-line {
+				text-align: center; 
+				margin-bottom: 20px; 
+			}
+	
+			.title-line h1 {
+				font-size: 28px; 
+				color: #333; 
+			}
+	
+		</style>
+	</head>
+	<body class="is-preload left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Title Line -->
+						<div class="title-line">
+							<h1><img src="images/logo1.png" alt="Logo" class="logo">DUNMORE HARD GOODS</h1>
+							<div style="clear:both;"></div> 
+						
+
+						<!-- Nav -->
+						<nav id="nav" class="centered-nav">
+							<ul>
+									<li><a href="index.html">HOME</a></li>
+									<li><a href="about.html">ABOUT</a></li>
+									<li class="current"><a href="boardfit.html">BOARDFIT</a></li>
+									<li>
+										<a href="#">SHOP</a>
+										<ul>
+											<li><a href="newrelease.html">NEW RELEASES</a></li>
+											<li><a href="sale.html">SALE</a></li>
+											
+										</ul>
+									</li>
+									<li><a href="contact.html">CONTACT</a></li>
+								</ul>
+							</nav>
+
+					</header>
+				
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-4 col-12-medium">
+								<div id="sidebar">
+
+									<!-- Sidebar -->
+										<section>
+                                            
+											<img src="images/spen1.jpg" alt="Sydney style="width: 100%; />
+										</section>
+
+										
+								</div>
+							</div>
+							<div class="col-8 col-12-medium imp-medium">
+								<div id="content">
+
+									<!-- Content -->
+										<id="main-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skateboard Calculator</title>
+    <style>
+        .calculator {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #recommendations {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>BoardFit Calculator</h2>
+            <p>Use our proprietary BoardFit calculator to determine which products are suitable for your style and size.</p>
+        </header>
+
+<div class="calculator">
+    <form id="skateboardCalculator">
+        <label for="shoeSize">Shoe Size:</label>
+        <input type="number" id="shoeSize" name="shoeSize" min="7" max="13" required>
+        
+        <label for="groundType">Ground Type:</label>
+        <select id="groundType" name="groundType">
+            <option value="smooth">Smooth</option>
+            <option value="rough">Rough</option>
+        </select>
+        
+        <label for="boardType">Board Type:</label>
+        <select id="boardType" name="boardType">
+            <option value="normal">Normal</option>
+            <option value="shaped">Shaped</option>
+        </select>
+        
+        <label for="skateStyle">Skating Style:</label>
+        <select id="skateStyle" name="skateStyle">
+            <option value="cruising">Cruising</option>
+            <option value="tricks">Technical Tricks</option>
+        </select>
+        
+        <button type="submit">See Setup Recommendations</button>
+    </form>
+
+    <div id="recommendations"></div>
+</div>
+
+<script>
+    document.getElementById('skateboardCalculator').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        var shoeSize = document.getElementById('shoeSize').value;
+        var groundType = document.getElementById('groundType').value;
+        var boardType = document.getElementById('boardType').value;
+        var skateStyle = document.getElementById('skateStyle').value;
+
+        var recommendations = getRecommendations(shoeSize, groundType, boardType, skateStyle);
+
+        var recommendationsDiv = document.getElementById('recommendations');
+        recommendationsDiv.innerHTML = "<strong>Recommended Products:</strong><br>" + recommendations.join('<br>');
+    });
+
+    function getRecommendations(shoeSize, groundType, boardType, skateStyle) {
+        
+        var products = [];
+        
+        if (boardType === 'shaped' && skateStyle === 'cruising') {
+            products.push("Black Label Man Van Shaped Deck 9.88'");
+			products.push("Welcome Sloth On Boline Shaped Deck 9.5'");
+        } else if (boardType === 'normal' && skateStyle === 'tricks') {
+            products.push("Polar The Mask Deck 8.375'");
+			products.push("Anti Hero Classic Eagle Deck 8.5' ");
+        } 
+        
+        if (groundType === 'smooth') {
+            products.push("Spitfire Wheels F4 53mm");
+        } else if (groundType === 'rough') {
+            products.push("The 4 Skate Co Softies Wheels 58mm");
+        }
+        
+        if (shoeSize >= 10) {
+            products.push("Anti Hero Classic Eagle Deck 8.5' ");
+			products.push("Polar The Mask Deck 8.375'");
+        } else {
+            products.push("Element Seal Deck 7.5'");
+        }
+        
+        return products;
+    }
+</script>
+
+											
+
+										</article>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<div id="copyright">
+									<ul class="menu">
+										<li>&copy; Braydon Pilot. All rights reserved</li><li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
